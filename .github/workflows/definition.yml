@@ -16,4 +16,4 @@ jobs:
     - name: Run Python script
       env:
         DICTIONARY_API_KEY: ${{ secrets.DICTIONARY_API_KEY }}
-      run: make run word="${{ github.event.inputs.word }}"
+      run: make run ARG1="${{ github.event.inputs.word }}"
