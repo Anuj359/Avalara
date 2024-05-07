@@ -1,11 +1,10 @@
-.PHONY: build test
+.PHONY: build test run
 
-build: ## This step is empty since there is nothing really for me to build or compile yet as its just a Python script
-	@echo "Building the utility..."
+build:
+	@echo "No build steps required for this project."
 
 test:
-	@echo "No test defined yet"
+	@echo "No test suite available for this project."
 
-.PHONY: run
 run:
-    python3 task.py $(ARG1)
+	python3 task.py "$(ARG1)"
