@@ -8,6 +8,7 @@
     # Returns:
     #     dict: A dictionary containing synonyms, antonyms, and definitions.
 ####
+import os
 import requests
 import sys
 import urllib3
