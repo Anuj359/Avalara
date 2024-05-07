@@ -8,4 +8,4 @@ test:
 
 .PHONY: run
 run:
-    python dictionary.py $(word)
+    python3 task.py "$(ARG1)"
