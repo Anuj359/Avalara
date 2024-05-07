@@ -16,7 +16,7 @@ jobs:
     - name: Run Python script
       env:
         DICTIONARY_API_KEY: ${{ secrets.DICTIONARY_API_KEY }}
-      run: make run "${{ github.event.inputs.word }}"
+      run: make run ARG1="${{ github.event.inputs.word }}"
       # run: |
       #   ls  # Check the directory contents
       #   echo "Word: ${{ github.event.inputs.word }}"  # Print the word provided as input

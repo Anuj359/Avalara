@@ -8,4 +8,4 @@ test:
 
 .PHONY: run
 run:
-    python3 task.py "$(ARG1)"
+    python3 task.py $(ARG1)
