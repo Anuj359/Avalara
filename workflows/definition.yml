@@ -1,0 +1,19 @@
+name: Dictionary Pipeline
+on:
+  workflow_dispatch:
+    inputs:
+      word:
+        description: 'Word to fetch definition for'
+        required: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v2
+    
+    - name: Run Python script
+      env:
+        DICTIONARY_API_KEY: ${{ secrets.DICTIONARY_API_KEY }}
+      run: make run word="${{ github.event.inputs.word }}"
