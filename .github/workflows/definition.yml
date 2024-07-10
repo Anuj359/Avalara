@@ -7,6 +7,11 @@ on:
         required: true
 
 jobs:
+  lint-check:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Lint-check
+      uses: Anuj359/Actions/lint-check/action.yaml@main
   build:
     runs-on: ubuntu-latest
     steps:
