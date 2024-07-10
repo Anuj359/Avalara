@@ -11,20 +11,20 @@ jobs:
   lint-check:
     runs-on: ubuntu-latest
     steps:
-    - name: Lint-check
-      uses: Anuj359/Actions/lint-check@main
+      - name: Lint-check
+        uses: Anuj359/Actions/lint-check@main
 
   build:
     runs-on: ubuntu-latest
     steps:
-    - name: Checkout repository
-      uses: actions/checkout@v2
+      - name: Checkout repository
+        uses: actions/checkout@v2
     
-    - name: Run Python script
-      env:
-        DICTIONARY_API_KEY: ${{ secrets.DICTIONARY_API_KEY }}
-      run: make run ARG1="${{ github.event.inputs.word }}"
-      # run: |
-      #   ls  # Check the directory contents
-      #   echo "Word: ${{ github.event.inputs.word }}"  # Print the word provided as input
-      #   python3 task.py ${{ github.event.inputs.word }}
+      - name: Run Python script
+        env:
+          DICTIONARY_API_KEY: ${{ secrets.DICTIONARY_API_KEY }}
+        run: make run ARG1="${{ github.event.inputs.word }}"
+        # run: |
+        # If the line length is an issue, split the run command into multiple lines
+        # run: |
+        #   make run ARG1="${{ github.event.inputs.word }}"
