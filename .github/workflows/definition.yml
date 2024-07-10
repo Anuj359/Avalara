@@ -1,3 +1,4 @@
+---
 name: Dictionary Pipeline
 on:
   workflow_dispatch:
@@ -12,6 +13,7 @@ jobs:
     steps:
     - name: Lint-check
       uses: Anuj359/Actions/lint-check@main
+
   build:
     runs-on: ubuntu-latest
     steps:
