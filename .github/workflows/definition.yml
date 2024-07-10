@@ -11,7 +11,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: Lint-check
-      uses: Anuj359/Actions/lint-check/action.yaml@main
+      uses: Anuj359/Actions/lint-check@main
   build:
     runs-on: ubuntu-latest
     steps:
