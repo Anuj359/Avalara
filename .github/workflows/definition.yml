@@ -11,16 +11,16 @@ jobs:
   lint-check:
     runs-on: ubuntu-latest
     steps:
-    - name: Lint-check
+      name: Lint-check
       uses: Anuj359/Actions/lint-check@main
 
   build:
     runs-on: ubuntu-latest
     steps:
-    - name: Checkout repository
+      name: Checkout repository
       uses: actions/checkout@v2
 
-    - name: Run Python script
+      name: Run Python script
       env:
         DICTIONARY_API_KEY: ${{ secrets.DICTIONARY_API_KEY }}
       run: make run ARG1="${{ github.event.inputs.word }}"
