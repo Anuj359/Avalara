@@ -1,0 +1,44 @@
+---
+name: Input Check
+on:
+  pull_request:
+    types: [opened, synchronize, edited]
+    branches:
+      - main
+      - test
+    paths:
+      - '**'
+      - '!terraform/**/*'
+
+permissions:
+  contents: 'read'
+  id-token: 'write'
+
+
+jobs:
+  unit-test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: execute unit tests
+        run: |
+          echo "holder for unit tests to be run"
+        shell: bash
+
+  lint-check:
+    runs-on: ubuntu-latest
+    steps:
+      - name: execute lint and spell checks 
+        run: |
+          echo "For lint and spell checks"
+        shell: bash
+      - name: test helm build
+        uses: Anuj359/Actions/test@check
+        with:
+          lint_github_actions: true
+          lint_helm_files: false
+          lint_java_files: false
+          lint_script_files: false
+          lint_dockerfile: false
+          lint_bat_files: false
+          lint_cpp_files: false
+          lint_terraform_files: false
