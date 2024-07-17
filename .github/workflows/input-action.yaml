@@ -41,4 +41,3 @@ jobs:
           lint_dockerfile: false
           lint_bat_files: false
           lint_cpp_files: false
-          lint_terraform_files: false
