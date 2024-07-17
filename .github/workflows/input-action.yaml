@@ -36,8 +36,4 @@ jobs:
         with:
           lint_github_actions: true
           lint_helm_files: false
-          lint_java_files: false
-          lint_script_files: false
-          lint_dockerfile: false
-          lint_bat_files: false
-          lint_cpp_files: false
+
