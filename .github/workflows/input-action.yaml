@@ -32,13 +32,8 @@ jobs:
           echo "For lint and spell checks"
         shell: bash
       - name: test helm build
-        uses: Anuj359/Actions/test@check
+        uses: Anuj359/Actions/test@main
         with:
           lint_github_actions: true
           lint_helm_files: false
-          lint_java_files: false
-          lint_script_files: false
-          lint_dockerfile: false
-          lint_bat_files: false
-          lint_cpp_files: false
-          lint_terraform_files: false
+
